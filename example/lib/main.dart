@@ -29,8 +29,8 @@ class _MyAppState extends State<MyApp> {
     String platformVersion;
     // Platform messages may fail, so we use a try/catch PlatformException.
     try {
-      _encrypted = await Cryptlib.getEncryptedString("your key", "plain text");
-      _decrypted = await Cryptlib.getDecryptedString("your key", _encrypted);
+      _encrypted = await Cryptlib.getEncryptedString("T^\$%\$sFGFYTgFYUYF^(89)", "plain text");
+      _decrypted = await Cryptlib.getDecryptedString("T^\$%\$sFGFYTgFYUYF^(89)", "YYS8qFnqGK0L/lPa98kjX1xEstx2BL/YSYlVo0EC49M=");
     } on PlatformException {
       platformVersion = 'Failed to get platform version.';
     }
@@ -47,6 +47,7 @@ class _MyAppState extends State<MyApp> {
 
   @override
   Widget build(BuildContext context) {
+    print(_decrypted);
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(

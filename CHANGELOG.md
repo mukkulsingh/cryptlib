@@ -1,3 +1,3 @@
 ## 0.0.1
 
-* TODO: Describe initial release.
+* Initial commit for cryptlib plugin right now it supports only android. 

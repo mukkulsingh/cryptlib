@@ -1,0 +1,22 @@
+PODS:
+  - cryptlib (0.0.1):
+    - Flutter
+  - Flutter (1.0.0)
+
+DEPENDENCIES:
+  - cryptlib (from `.symlinks/plugins/cryptlib/ios`)
+  - Flutter (from `Flutter`)
+
+EXTERNAL SOURCES:
+  cryptlib:
+    :path: ".symlinks/plugins/cryptlib/ios"
+  Flutter:
+    :path: Flutter
+
+SPEC CHECKSUMS:
+  cryptlib: a0dc8dfdf1953e095f6953d73a59a0132dc0a2b5
+  Flutter: 434fef37c0980e73bb6479ef766c45957d4b510c
+
+PODFILE CHECKSUM: 8e679eca47255a8ca8067c4c67aab20e64cb974d
+
+COCOAPODS: 1.10.1

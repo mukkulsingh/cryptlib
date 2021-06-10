@@ -1,10 +1,10 @@
 # cryptlib
-
-A new Flutter project.
+CryptLib Plugin
 
 ## Getting Started
 
-This project is a starting point for a Flutter
+Use this plugin for encryption and decryption using cryptlib
+
 [plug-in package](https://flutter.dev/developing-packages/),
 a specialized package that includes platform-specific implementation code for
 Android and/or iOS.

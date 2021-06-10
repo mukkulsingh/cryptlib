@@ -1,8 +1,7 @@
 name: cryptlib
-description: A new Flutter project.
-version: 0.0.1
-author:
-homepage:
+description: CryptLib Flutter Plugin
+version: 0.1.0
+homepage: https://github.com/mukkulsingh/cryptlib/
 
 environment:
   sdk: ">=2.7.0 <3.0.0"

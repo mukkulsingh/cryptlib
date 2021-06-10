@@ -1,5 +1,5 @@
 #import "CryptlibPlugin.h"
-
+#import "CryptLib.h"
 @implementation CryptlibPlugin
 + (void)registerWithRegistrar:(NSObject<FlutterPluginRegistrar>*)registrar {
   FlutterMethodChannel* channel = [FlutterMethodChannel
@@ -10,17 +10,21 @@
 }
 
 - (void)handleMethodCall:(FlutterMethodCall*)call result:(FlutterResult)result {
-  if ([@"getPlatformVersion" isEqualToString:call.method]) {
-    result([@"iOS " stringByAppendingString:[[UIDevice currentDevice] systemVersion]]);
-  }else if([@"getEncryptedString"]){
-      NSDictionary arguments = call.arguments;
-      String key = arguments["key"];
-      String text = arguments["text"];
-      CryptLib cryptlib = CryptLib();
-      result(cryptlib.)
-  } else {
+ if ([@"getEncryptedString" isEqualToString:call.method]) {
+    NSDictionary *argument = call.arguments;
+    NSString *key = argument[@"key"];
+    NSString *text = argument[@"text"];
+    CryptLib *cryptLib = [[CryptLib alloc]init];
+    result([cryptLib encryptPlainTextRandomIVWithPlainText:text key: key]);
+
+  }else if ([@"getDecryptedString" isEqualToString:call.method]) {
+       NSDictionary *argument = call.arguments;
+       NSString *key = argument[@"key"];
+       NSString *text = argument[@"encryptedText"];
+       CryptLib *cryptLib = [[CryptLib alloc]init];
+       result([cryptLib decryptCipherTextRandomIVWithCipherText:text key: key]);
+   }else {
     result(FlutterMethodNotImplemented);
   }
 }
-
 @end
